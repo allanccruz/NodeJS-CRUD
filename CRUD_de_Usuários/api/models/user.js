@@ -1,6 +1,9 @@
 //Importar o objeto do usuário do database que está conectado ao mongoose
 const mongoose = require('../database');
 
+//Importar a biblioteca pra encriptar a senha do usuário
+const bcrypt = require('bcryptjs');
+
 //Definir os campos que terão dentro do banco de dados para um usuário
 const UserSchema = new mongoose.Schema({
     name: {
@@ -31,6 +34,14 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     }
+});
+
+//Antes de salvar o usuário, executa a função de encriptar a senha
+UserSchema.pre('save', async function (next) {
+    const hash = await bcrypt.hash(this.password, 10);
+    this.password = hash;
+
+    next();
 });
 
 //Definir o objeto do usuário para ser exportado

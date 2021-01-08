@@ -12,4 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 //Referenciar o controle de autenticação na api
 require('./controllers/authController')(app);
 
-app.listen(3000);
+//Rodar a aplicação na porta setada
+app.listen(3000, () => {
+    console.log(`Servidor rodando na porta ${3000}`)
+  });

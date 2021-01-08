@@ -8,12 +8,13 @@
     "body-parser": "^1.19.0",
     "config": "^3.3.3",
     "express": "^4.17.1",
-    "mongoose": "^5.11.10",
+    "mongoose": "^5.11.10"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.7"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon api/index.js"
   },
   "author": "",
   "license": "ISC"

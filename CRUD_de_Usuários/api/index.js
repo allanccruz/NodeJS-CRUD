@@ -9,8 +9,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
-//Referenciar o controle de autenticação na api
-require('./controllers/authController')(app);
+//Referenciar as rotas na api
+require('./controllers/userController.js')(app);
 
 //Rodar a aplicação na porta setada
 app.listen(3000, () => {

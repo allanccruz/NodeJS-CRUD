@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        //Para quando buscar o usuário no banco de dados a informação da senha não venha no array de usuários:
+        //Para quando precisar buscar um ou mais usuários no banco de dados a informação da senha não venha junto:
         select: false,
     },
 

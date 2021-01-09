@@ -32,13 +32,26 @@ module.exports = {
   },
 
   //Retornar um usuário específico pelo seu e-mail usando a query userEmail
-  async getUserEmail (req, res) {
+  async getUserEmail(req, res) {
+    User.findOne(
+      { email: req.query.userEmail },
+      "users",
+      function (error, user) {
+        if (user) {
+          return res.json(user);
+        }
+        return res.status(400).send({ error: "User not found" });
+      }
+    );
+  },
 
-    User.findOne({email: req.query.userEmail}, "users", function (error, user) {
-      if(user) {
-        return res.json(user);
+  //Deletar um usuário específico usando a query userEmail
+  async deleteUser(req, res) {
+    await User.deleteOne({ email: req.query.userEmail }).then((userFound) => {
+      if (userFound.n === 1) {
+        return res.status(200).send("User deleted successfully");
       }
       return res.status(400).send({ error: "User not found" });
     });
-  }
+  },
 };

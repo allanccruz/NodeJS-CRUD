@@ -4,11 +4,12 @@ const mongoose = require('../database');
 //Importar a biblioteca pra encriptar a senha do usuário
 const bcrypt = require('bcryptjs');
 
-//Definir os campos que terão dentro do banco de dados para um usuário
+//Definir a estrutura do objeto de usuário, os campos que terão dentro dele e as suas configurações 
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        select: true,
     },
 
     email: {
@@ -16,11 +17,13 @@ const UserSchema = new mongoose.Schema({
         //Propriedade que faz com que só seja possivel ter uma cópia de email no banco de dados, evitando que usuários sejam criados com o mesmo email:
         unique: true,
         required: true,
+        select: true,
     },
 
     phone: {
         type: String,
         required: true,
+        select: true,
     },
 
     password: {
@@ -48,5 +51,3 @@ UserSchema.pre('save', async function (next) {
 const User = mongoose.model('User', UserSchema);
 
 module.exports = User;
-
- 

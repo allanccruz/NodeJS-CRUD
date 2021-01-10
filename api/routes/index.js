@@ -12,4 +12,6 @@ routes.get('/user/', userController.getUserEmail);
 
 routes.delete('/user/', userController.deleteUser);
 
+routes.patch('/user/', userController.updateUser);
+
 module.exports = routes;

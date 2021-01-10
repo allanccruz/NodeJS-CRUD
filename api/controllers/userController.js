@@ -1,6 +1,6 @@
-const express = require("express");
+const express = require('express');
 
-const User = require("../models/User");
+const User = require('../models/User');
 
 module.exports = {
   //Definir uma rota de cadastro de usuário e criar um objeto de usuário toda vez que a rota for chamada
@@ -18,7 +18,7 @@ module.exports = {
       //Para não retornar a senha do usuário quando ele for criado:
       user.password = undefined;
 
-      return res.send({ user });
+      return res.json(user);
     } catch (err) {
       return res.status(400).send({ error: "Registration failed" });
     }
@@ -26,23 +26,19 @@ module.exports = {
 
   //Retonar todos os usuários existentes no banco de dados
   async getAllUsers(req, res) {
-    User.find({}, "users", function (error, users) {
+    User.find({}, (error, users) => {
       return res.json(users);
     });
   },
 
   //Retornar um usuário específico pelo seu e-mail usando a query userEmail
   async getUserEmail(req, res) {
-    User.findOne(
-      { email: req.query.userEmail },
-      "users",
-      function (error, user) {
-        if (user) {
-          return res.json(user);
-        }
+    User.findOne({ email: req.query.userEmail }, (error, userFound) => {
+      if (userFound === null) {
         return res.status(400).send({ error: "User not found" });
-      }
-    );
+      }  
+      return res.json(userFound);
+      })
   },
 
   //Deletar um usuário específico usando a query userEmail
@@ -54,4 +50,19 @@ module.exports = {
       return res.status(400).send({ error: "User not found" });
     });
   },
-};
+
+  //Atualizar informações de usuário existente usando a query userEmail
+  async updateUser (req, res) {
+    const options = {new: true} //Faz com que o método retorne o objeto novo, já atualizado
+
+      await User.findOneAndUpdate({ email: req.query.userEmail }, req.body, options).then((userFound) => {
+        
+        if (userFound === null) {
+          return res.status(400).send({ error: "User not found" });
+        }
+        return res.json(userFound);
+      });
+  },
+}
+
+

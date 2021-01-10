@@ -9,7 +9,6 @@ const UserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        select: true,
     },
 
     email: {
@@ -17,13 +16,11 @@ const UserSchema = new mongoose.Schema({
         //Propriedade que faz com que só seja possivel ter uma cópia de email no banco de dados, evitando que usuários sejam criados com o mesmo email:
         unique: true,
         required: true,
-        select: true,
     },
 
     phone: {
         type: String,
         required: true,
-        select: true,
     },
 
     password: {

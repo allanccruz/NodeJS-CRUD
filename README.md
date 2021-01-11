@@ -1,4 +1,4 @@
-# CRUD de usuários utilizando NodeJS
+# CRUD de usuários em NodeJS
 
 ## Tecnologias utilizadas
 
@@ -68,19 +68,19 @@ npm start
         ![](images/009.png)
 
     - **Buscar um único usuário**: http://localhost:3000/user
-        - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado:
+        - Essa requisição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado:
 
         ![](images/010.png)
 
     - **Deletar um usuário**: http://localhost:3000/user
-        - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado:
+        - Essa requisição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado:
 
         ![](images/011.png)
 
         ![](images/012.png)
 
     - **Atualizar as informações de um usuário**: http://localhost:3000/user
-        - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado e de um body contendo a informação do usuário que deve ser atualizada:
+        - Essa requisição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado e de um body contendo a informação do usuário que deve ser atualizada:
             ~~~
             {
                 "name": "Carbão Lindão",

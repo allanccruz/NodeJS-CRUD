@@ -10,7 +10,7 @@
 ## Como executar a API
 - Primeiramente, instale o NodeJS e o MongoDB pelos links acima.
 
-- Agora, já dentro de um editor de código (Visual Studio Code, por exemplo) com o diretório que contém a API aberta, instale todos os pacotes utilizando o seguinte comando no terminal:
+- Agora, já dentro de um editor de código (Visual Studio Code, por exemplo) com o diretório que contém a API aberto, instale todos os pacotes utilizando o seguinte comando no terminal:
 
 ~~~
 npm install

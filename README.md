@@ -28,27 +28,25 @@ npm start
 
 ### Construindo a estrutura de testes no Insomnia
 - Inicialmente, crie um Workspace:
-
 ![](images/001.png)
 
 - Em seguida, crie as requisições que serão utilizadas para testar a API:
-
 ![](images/002.png)
 
     - POST (Criar usuário)
-    ![](images/003.png)
+![](images/003.png)
 
     - GET (Listar todos os usuários)
-    ![](images/004.png)
+![](images/004.png)
 
     - GET (Buscar um único usuário)
-    ![](images/005.png)
+![](images/005.png)
 
     - DELETE (Deletar um usuário)
-    ![](images/006.png)
+![](images/006.png)
 
     - PATCH (Atualizar as informações de um usuário)
-    ![](images/007.png)
+![](images/007.png)
 
 - Agora, com a estrutura de testes criada, podemos iniciá-los colocando os respectivos endpoints no campo de cada requisição.
 

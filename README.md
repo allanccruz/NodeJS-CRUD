@@ -50,7 +50,7 @@ npm start
 
 - Agora, com a estrutura de testes criada, podemos iniciá-los colocando os respectivos **endpoints** no campo de cada requisição.
 
-    - Criar usuário: http://localhost:3000/user/create
+    - **Criar usuário**: http://localhost:3000/user/create
         - Para essa requisição é necessário fornecer um body com a seguinte estrutura que conterá as informações do usuário a ser criado:
 
         ~~~
@@ -63,23 +63,23 @@ npm start
         ~~~
         ![](images/008.png)
         
-    - Listar todos os usuários: http://localhost:3000/user/list
+    - **Listar todos os usuários**: http://localhost:3000/user/list
 
         ![](images/009.png)
 
-    - Buscar um único usuário: http://localhost:3000/user
+    - **Buscar um único usuário**: http://localhost:3000/user
         - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado:
 
         ![](images/010.png)
 
-    - Deletar um usuário: http://localhost:3000/user
+    - **Deletar um usuário**: http://localhost:3000/user
         - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado:
 
         ![](images/011.png)
 
         ![](images/012.png)
 
-    - Atualizar as informações de um usuário: http://localhost:3000/user
+    - **Atualizar as informações de um usuário**: http://localhost:3000/user
         - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado e de um body contendo a informação do usuário que deve ser atualizada:
 
         ![](images/013.png)

@@ -48,7 +48,7 @@ npm start
     - PATCH (Atualizar as informações de um usuário)
 ![](images/007.png)
 
-- Agora, com a estrutura de testes criada, podemos iniciá-los colocando os respectivos endpoints no campo de cada requisição.
+- Agora, com a estrutura de testes criada, podemos iniciá-los colocando os respectivos **endpoints** no campo de cada requisição.
 
     - Criar usuário: http://localhost:3000/user/create
         - Para essa requisição é necessário fornecer um body com a seguinte estrutura que conterá as informações do usuário a ser criado:

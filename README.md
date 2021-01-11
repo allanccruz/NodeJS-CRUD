@@ -81,6 +81,13 @@ npm start
 
     - **Atualizar as informações de um usuário**: http://localhost:3000/user
         - Essa requesição necessita de uma query de nome **userEmail** em que seu valor é o e-mail do usuário a ser buscado e de um body contendo a informação do usuário que deve ser atualizada:
+            ~~~
+            {
+                "name": "Carbão Lindão",
+                "phone": "19971775025"
+            }
+            ~~~
+
 
         ![](images/013.png)
 

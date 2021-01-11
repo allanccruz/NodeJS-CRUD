@@ -11,7 +11,7 @@ const app = express();
 //Configurar express para utilizar requisições e respostas apenas em JSON (por padrão o express espera em html)
 app.use(express.json())
 
-//Configurar o express para usar as rotas
+//Configurar o express para usar as rotas criadas
 app.use(routes);
 
 //Indicar as funções dos pacotes que serão utilizadas na API

@@ -28,9 +28,11 @@ npm start
 
 ### Construindo a estrutura de testes no Insomnia
 - Inicialmente, crie um Workspace:
+
 ![](images/001.png)
 
 - Em seguida, crie as requisições que serão utilizadas para testar a API:
+
 ![](images/002.png)
 
     - POST (Criar usuário)
